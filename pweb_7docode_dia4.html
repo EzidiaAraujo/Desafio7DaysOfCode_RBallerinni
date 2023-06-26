@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio dia 4 jogo adivinha</title>
+</head>
+<body>
+    <script>
+var numeroAdivinhar = Math.floor(Math.random() * 11); 
+var tentativas = 3;
+while (tentativas > 0) {
+  var chute = parseInt(prompt("Digite um número de 0 a 10:"));
+  if (chute === numeroAdivinhar) {
+    alert("Parabéns! Você acertou.");
+    break; 
+  } else {
+    tentativas--; 
+    if (tentativas > 0) {
+      alert("Errado! Tente novamente. Você tem mais " + tentativas + " tentativas.");
+    } else {
+      alert("Não foi desta Vez! Suas tentativas acabaram. O número correto era " + numeroAdivinhar + ".");
+    }
+  }
+}
+    </script>
+</body>
+</html>

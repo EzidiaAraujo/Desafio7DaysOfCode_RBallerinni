@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+function soma(a, b) {
+    return a + b;
+  }
+  
+  function subtracao(a, b) {
+    return a - b;
+  }
+  
+  function multiplicacao(a, b) {
+    return a * b;
+  }
+  
+  function divisao(a, b) {
+    return a / b;
+  }
+  
+  function calculadora() {
+    let opcao = "";
+  
+    while (opcao !== "sair") {
+      opcao = prompt("Escolha uma opção: soma, subtração, multiplicação, divisão, ou sair");
+  
+      if (opcao === "sair") {
+        console.log("Até a próxima!");
+        break;
+      }
+  
+      const valor1 = parseFloat(prompt("Digite o primeiro valor:"));
+      const valor2 = parseFloat(prompt("Digite o segundo valor:"));
+  
+      let resultado;
+  
+      switch (opcao) {
+        case "soma":
+          resultado = soma(valor1, valor2);
+          break;
+        case "subtração":
+          resultado = subtracao(valor1, valor2);
+          break;
+        case "multiplicação":
+          resultado = multiplicacao(valor1, valor2);
+          break;
+        case "divisão":
+          resultado = divisao(valor1, valor2);
+          break;
+        default:
+          console.log("Opção inválida!");
+          break;
+      }
+  
+      if (resultado !== undefined) {
+        console.log(`Resultado da ${opcao}: ${resultado}`);
+      }
+    }
+  }
+  
+  calculadora();
+    </script>
+</body>
+</html>
